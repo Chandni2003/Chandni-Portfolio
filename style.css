@@ -1,0 +1,506 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap');
+/* General Body Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #1a1919; /* Dark background for the whole body */
+  color: #e0e0e0; 
+  margin: 0;
+}
+/* Navbar Styling */
+.navbar {
+  background-color: #2c3e50;
+}
+.navbar-brand { 
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #f39c12;
+}
+.navbar-nav .nav-item .nav-link {
+  color: #e0e0e0;
+  font-weight: 500;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+/* Adding a keyboard-like effect on hover */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #f39c12;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Shadow to give 3D effect */
+  transform: translateY(-3px); /* Slight lift effect */
+  background-color: #34495e; /* Change background color on hover */
+  border: 2px solid #f39c12;  /* Add a border to make it look like a key */
+}
+/* Active state */
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #f39c12; /* Highlight the active link */
+  color: #2c3e50;  /* Dark text when active */
+  box-shadow: none;
+  border: 2px solid #e67e22;
+}
+/* Adding a press effect when clicking */
+.navbar-nav .nav-item .nav-link:active {
+  transform: translateY(1px); /* Simulate a press effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+/* Navbar responsiveness for smaller devices */
+@media (max-width: 992px) {
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.5rem; /* Adjust font size for medium screens */
+    padding: 8px 16px;
+  }
+}
+/* Navbar responsiveness for mobile view */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.5rem;  /* Adjust brand size for mobile */
+  }
+  .navbar-nav .nav-item .nav-link {
+    font-size: 1rem; /* Smaller text on mobile */
+    padding: 10px 15px;
+  }
+  .navbar-nav {
+    text-align: center; /* Center-align nav links on mobile */
+  }
+}
+/* Home Header with Background Image and Opacity */
+.home-header {
+  position: relative;
+  background-image: url('project-img/bg.png'); /* Replace with your desired image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;    
+  opacity: 0.6;
+  margin-top: 10px;
+}
+.home-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1;
+}
+.header-content {
+  max-width: 90%;
+  text-align: center;
+}
+/* Typing Effect for Main Text */
+.animated-text {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  animation: typing 5s steps(30) 3s infinite, blink 1s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Taglines with Continuous Fade In/Out */
+.taglines {
+  text-shadow: 1px 1px 4px  #e6d922;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  /* margin-top: 20px; */
+}
+.tagline {
+  font-size: 1.5rem;
+  color: #080808;
+  animation: fadeInOut 6s infinite;
+  opacity: 0;
+}
+/* Typing Effect for Main Text */
+.animated-text.initial {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  animation: none; /* No animation by default */
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Animation once the page is loaded */
+.animated-text.animated {
+  animation: typing 3s steps(30) 1s infinite, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Typing Animation for Main Text */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* Blinking Cursor Animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }   
+}
+/* Fade In/Out Animation for Taglines */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1.2;
+  }
+}
+.tagline:nth-child(1) {
+  animation-delay: 1s;
+}
+.tagline:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.tagline:nth-child(3) {
+  animation-delay: 5s;
+}
+/* Make the text smaller for mobile and smaller devices */
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 2.5rem; /* Smaller font size for tablets */
+  }
+
+  .taglines .tagline {
+    font-size: 1.3rem; /* Adjust taglines size */
+  }
+}
+/* Further reduce text size on mobile screens */
+@media (max-width: 576px) {
+  .animated-text {
+    font-size: 0.8rem; /* Even smaller font size for mobile */
+    text-shadow: 1px 1px 4px white ;
+  }
+  .taglines .tagline {
+    font-size: 0.9rem; /* Adjust taglines for mobile */
+  }
+}
+/* About Me Section */
+#about {
+    background: linear-gradient(145deg, #1e1e1e, #121212); /* Gradient background */
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+  }
+  #about h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #f39c12; /* Accent color */
+    margin-bottom: 20px;
+  }
+  #about h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #dcdcdc; /* Light gray for subheading */
+    margin-bottom: 15px;
+  }  
+  #about p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    line-height: 1.8;
+  }
+  #about .btn-primary {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  #about .btn-primary:hover {
+    box-shadow: 2px 2px 5px #e6a166 ;
+    background-color: #e67e22;
+    border-color: #e67e22;
+  }
+
+  #about .social-links i {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  #about .social-links i:hover {
+    color: #e67e22;
+  }
+  /* Projects Section */
+#portfolio {
+    background-color: #121212; /* Dark background for the section */
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin: 10px 0px;
+}
+#portfolio h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #f39c12; /* Accent color */
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Clean edges on hover */
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.card-img-top {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+.card-body {
+    padding: 25px;
+    color: #ffffff;
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f39c12;
+}
+.card-text {
+    font-size: 0.8rem;
+    color: #dcdcdc;
+    margin-bottom: 15px;
+}
+.card-footer {
+    background-color: #1e1e1e;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+}
+.card-footer .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.card-footer .btn-primary {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+.card-footer .btn-primary:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+.card-footer .btn-secondary {
+    background-color: #34495e;
+    border-color: #34495e;
+}
+
+.card-footer .btn-secondary:hover {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.tagline-p{
+  font-size: 1rem;
+  margin: 0px 0px 40px 0px;
+}
+/* Personal Projects Section */
+#personal-projects {
+  background-color: #121212; /* Dark background for personal projects section */
+  padding: 60px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+#personal-projects h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #f39c12; /* Accent color */
+  margin-bottom: 20px;
+}
+.card {
+  border: none;
+  border-radius: 12px;
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Clean edges on hover */
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.card-img-top {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+.card-body {
+  padding: 15px;
+  color: #ffffff;
+}
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f39c12;
+}
+.card-text {
+  font-size: 1rem;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+#tagline{
+  color: #f39c12;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 5px rgb(208, 211, 17);
+}
+.animated-heading {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  animation: bounceLoop 2s infinite;
+  text-shadow: 1px 1px 5px rgb(208, 211, 17);
+}
+@keyframes bounceLoop {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.card-footer {
+  background-color: #1e1e1e;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+}
+.card-footer .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.card-footer .btn-primary {
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
+.card-footer .btn-primary:hover {
+  background-color: #e67e22;
+  border-color: #e67e22;
+}
+.card-footer .btn-secondary {
+  background-color: #34495e;
+  border-color: #34495e;
+}
+.card-footer .btn-secondary:hover {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
+/* Responsive for smaller screens */
+@media (max-width: 767px) {
+  #portfolio h2, #personal-projects h2 {
+    font-size: 2.5rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    margin-bottom: 30px;
+  }
+}
+  /* Mobile-first responsiveness */
+  @media (max-width: 767px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+    #about h2, #skills h2, #portfolio h2 {
+      font-size: 2rem;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-body .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  /* Medium to large devices */
+  @media (min-width: 768px) {
+    .card {
+      margin-bottom: 30px;
+    }
+  }
+/* Footer Styling */
+footer {
+  background-color: #121212; /* Dark footer */
+  color: #ffffff;
+  padding: 40px 20px;
+}
+footer h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #f39c12;
+}
+footer .social-icons a {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-right: 20px;
+}
+footer .social-icons a:hover {
+  color: #f39c12;
+}
+footer p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+/* Mobile-first responsiveness */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  #about h2, #skills h2, #portfolio h2 {
+    font-size: 2rem;
+  }
+  #about h3 {
+    font-size: 1.3rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card-body .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/* Medium to large devices */
+@media (min-width: 768px) {
+  .card {
+    margin-bottom: 30px;
+  }
+}

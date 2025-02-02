@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"> Chandni Gupta </a>
+        <!-- Toggler for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar items, collapsible on small screens -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer-container">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="home-header">
+  <div class="header-content">
+      <h1 class="animated-text initial">Web Developer | Creative Thinker | Problem Solver  </h1>
+      <div class="taglines">
+          <p class="tagline">Transforming Ideas into Reality</p>
+          <p class="tagline">Building the Future, One Line at a Time</p>
+          <p class="tagline">Solving Problems with Creative Solutions</p>
+      </div>
+  </div>
+</header>
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-4 mb-4">
+                  <img src="project-img/photo.jpeg" alt="Your Name" class="img-fluid rounded-circle shadow">
+              </div>
+              <div class="col-md-8">
+                  <h2>About Me</h2>
+                  <h3>Hi, I'm Chandni Gupta 👋</h3>
+                  <div id="about-content">
+                      <p>
+                          I am currently pursuing a <strong>Bachelor of Computer Applications (BCA)</strong>. 
+                          My passion lies in <strong>web development</strong> and <strong>software development</strong>. 
+                          I enjoy working creatively to build user-friendly and visually appealing web applications.
+                      </p>
+                      <p class="read-more-content d-none">
+                          My journey into the tech world began in class 11 when I joined computer classes and completed 
+                          an <strong>Advanced Diploma in Computer Applications (ADCA)</strong>. During this course, I learned about 
+                          Microsoft 365, Photoshop, CorelDRAW, and web designing. This experience sparked my interest 
+                          in web development, and I have been pursuing this passion ever since.
+                      </p>
+                      <p class="read-more-content d-none">
+                          Beyond coding, I have a keen interest in <strong>logo designing, video creation, and video editing</strong>. 
+                          Exploring new technologies excites me, and I love learning how they can solve real-world problems.
+                      </p>
+                      <p class="read-more-content d-none">
+                          My goal is to create impactful digital experiences that provide value to both users and businesses.
+                      </p>
+                  </div>
+                  <ul class="list-unstyled mt-3">
+                      <li><i class="fas fa-check-circle"></i> Strong foundation in modern web technologies</li>
+                      <li><i class="fas fa-check-circle"></i> Expertise in creative and innovative design</li>
+                      <li><i class="fas fa-check-circle"></i> Passionate about lifelong learning and technological exploration</li>
+                  </ul>
+                  <a href="project-img/resume.pdf" target="_blank" class="btn btn-primary mt-3">Download My Resume</a>
+                  <button id="read-more-btn" class="btn btn-secondary mt-3">Read More</button>
+              </div>
+          </div>
+      </div>
+  </section>
+   <!-- My Projects Section -->
+<section id="portfolio" class="py-5 bg-dark">
+    <div class="container text-center">
+        <h2>My Projects</h2>
+        <p class="tagline-p">Here are some of the projects I have worked on. Click on the links to view more details or try them out!<br> Where Creativity Meets Technology.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Project Card 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="project-img/project1.jpeg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title"> Portfolio Web</h5>
+                        <p class="card-text">A responsive personal portfolio showcasing my skills and projects.</p>
+                        <p><strong>Technologies:</strong> HTML5, CSS3, Bootstrap5, JavaScript</p>
+                        <a href="https://github.com/Chandni2003" target="_blank" class="btn btn-primary">GitHub</a>
+                        <a href="https://example.com" target="_blank" class="btn btn-secondary">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="project-img/project2.jpeg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">E-commerce Website</h5>
+                        <p class="card-text">Shopster is a sleek, user-friendly e-commerce website that allows users to browse, filter products,
+                           and easily add them to a cart for a smooth shopping experience across all devices.</p>
+                        <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Local Storage (for data persistence)</p>
+                        <a href="https://github.com/Chandni2003" target="_blank" class="btn btn-primary">GitHub</a>
+                        <a href="https://chandni2003.github.io/Shopster/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="project-img/project3.jpeg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Task Manager</h5>
+                        <p class="card-text">This dynamic To-Do List with an integrated calendar helps users efficiently organize tasks,
+                           track deadlines, and manage events with ease, offering a simple, intuitive interface for seamless productivity.</p>
+                        <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Local Storage (for data persistence)</p>
+                        <a href="https://github.com/Chandni2003" target="_blank" class="btn btn-primary">GitHub</a>
+                        <a href="https://chandni2003.github.io/To-Do-List-with-Calendar/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Personal Projects Section -->
+<section id="personal-projects" class="py-5 bg-dark">
+    <div class="container text-center">
+        <h2>My Personal Projects</h2>
+        <p class="tagline-p">From Concept to Creation – My Personal Projects</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Personal Project Card 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="project-img/p-project1.jpeg" class="card-img-top" alt="Personal Project 1" height="200px" width="20px">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal Portfolio</h5>
+                        <p class="card-text">This is a classic Stone, Paper, Scissors game with a fun and interactive interface, 
+                          allowing users to play against the computer and enjoy a simple yet engaging experience.</p>
+                        <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                        <a href="https://github.com/Chandni2003" target="_blank" class="btn btn-primary">GitHub</a>
+                        <a href="https://chandni2003.github.io/Stone-Paper-Scissor/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Personal Project Card 2 -->
+            <div class="col">
+              <div class="card">
+                  <img src="#" class="card-img-top" alt="Personal Project 1" height="200px" width="20px">
+                  <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"></p>
+                      <p><strong>Technologies:</strong> </p>
+                      <a href="#" target="_blank" class="btn btn-primary">GitHub</a>
+                      <a href="#" target="_blank" class="btn btn-secondary">Live Demo</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Personal Project Card 3 -->
+          <div class="col">
+            <div class="card">
+                <img src="#" class="card-img-top" alt="Personal Project 1" height="200px" width="20px">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                    <p><strong>Technologies:</strong> </p>
+                    <a href="https://github.com/Chandni2003" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="#" target="_blank" class="btn btn-secondary">Live Demo</a>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="skills" class="py-5">
+  <div class="container text-center">
+    <h2 class="animated-heading">Skills / Tools</h2>
+    <p id="tagline" class=" mb-5">From Concept to Code – I’ve Got the Skills</p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Frontend Skills -->
+            <div class="col">
+              <div class="card p-3">
+                <h3>Frontend Development</h3>
+                <ul>
+                   <li><i class="fab fa-html5"></i> HTML</li>
+                  <li><i class="fab fa-css3-alt"></i> CSS</li>
+                  <li><i class="fab fa-bootstrap"></i> Bootstrap 5</li>
+                  <li><i class="fab fa-js-square"></i> JavaScript</li>
+                  <li><i class="fab fa-react"></i> React.js</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Backend Skills -->
+            <div class="col">
+              <div class="card p-3">
+                <h3>Backend Development</h3>
+                  <ul>
+                    <li><i class="fas fa-code"></i> DOM Manipulation</li>
+                    <li><i class="fas fa-database"></i> SQL Server</li>
+                    <li><i class="fas fa-server"></i> MVC</li>
+                    <li><i class="fab fa-microsoft"></i> C#</li>
+                  </ul>
+              </div>
+            </div>
+            <!-- Tools & Technologies -->
+              <div class="col">
+                <div class="card p-3">
+                  <h3>Tools & Technologies</h3>
+                    <ul>
+                      <li><i class="fab fa-microsoft"></i> Visual Studio</li>
+                      <li><i class="fas fa-code"></i> Visual Studio Code</li>
+                      <li><i class="fab fa-github"></i> GitHub</li>
+                    </ul>
+                  </div>
+              </div>
+            <!-- Soft Skills -->
+            <div class="col">
+              <div class="card p-3">
+                <h3>Soft Skills</h3>
+                <ul>
+                  <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+                  <li><i class="fas fa-users"></i> Team Collaboration</li>
+                  <li><i class="fas fa-clock"></i> Time Management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white py-4">
+        <div id="footer-container" class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Contact Me</h4>
+              <p><i class="fas fa-envelope"></i> Email: <a href="mailto:guptachandni463@gmail.com" class="text-white">guptachandni463@gmail.com</a></p>
+              <p><i class="fas fa-phone"></i> Phone: <a href="tel:+1234567890" class="text-white">+91 84169 49394</a></p>
+              <p><i class="fas fa-map-marker-alt"></i> Address: North-west Delhi-110086</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Follow Me</h4>
+              <div class="social-icons">
+                <ul style="list-style-type: circle;">
+                <li><a href="https://www.linkedin.com/in/johndoe" target="_blank" class="text-white"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/Chandni2003" target="_blank" class="text-white"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="https://twitter.com/johndoe" target="_blank" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h4>More Info</h4>
+              <p><i class="fas fa-info-circle"></i> "Have a Project in Mind? Let's Chat!" <a href="contact-form.html" class="text-white">Contact Form</a></p>
+            </div>
+          </div>
+          <p class="text-center mt-4">© 2025 Chandni Gupta. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
